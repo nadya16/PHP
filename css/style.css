@@ -20,6 +20,7 @@ position: relative; /* боковая колонка перемещается в
   margin: 0 auto; /* сайт располагается по центру экрана */
   max-width: 1100px; /* резиновая, растягивается до значения в 1200px */
   min-width: 450px;
+  padding:  0px ; 
 }
 
 
@@ -32,30 +33,236 @@ position: relative; /* боковая колонка перемещается в
 }
 .center {display: block; margin:0 auto;}
 
-#header2 {
+body {
+	font: 90%/160% Arial, Helvetica, sans-serif;
+	color: #666;
+	width: 900px;
+	max-width: 96%;
+	margin: 0 auto;
+}
+
+#header_menu {
         width:100%;
 	background: #D3D3DA;
         min-height: 50px;
         height: auto;
 }
-.menu a{ 
-        color:#000000;
-        text-decoration: none;   
- 
-}
-.menu{ 
+
+.menu { 
         text-align:center;
         font-size:26px;
 	font-family:Arial; 
         padding: 10px 0px 10px;    
 }
 
+
+
+/*Menu for mobile*/
+
+p {
+	margin: 0 0 20px;
+}
+a {
+	color: #69C;
+	text-decoration: none;
+}
+a:hover {
+	color: #F60;
+}
+h1, h2, h3 {
+	color: #000;
+	font-family:'Open Sans', Calibri, Arial, sans-serif;
+	font-weight: 500;
+	line-height: 120%;
+	margin: 30px 0 10px;
+}
+h1 {
+	font-size: 1.7em;
+	color: #000;
+}
+h2 {
+	font-size: 1.4em;
+	border-top: solid 1px #DADADA;
+	padding-top: 20px;
+}
+h3 {
+	font-size: 1.1em;
+}
+
+/* меню */
+.nav {
+	margin: 20px 0;
+}
+.nav ul {
+	margin: 0;
+	padding: 0;
+}
+.nav li {
+	margin: 0 5px 10px 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+	*display:inline; /* ie7 */
+}
+.nav a {
+	padding: 3px 12px;
+	text-decoration: none;
+	color: #999;
+	line-height: 100%;
+}
+.nav a:hover {
+	color: #000;
+}
+.nav .current a {
+	background: #999;
+	color: #fff;
+	border-radius: 3px;
+}
+
+/* меню справа */
+.nav.right ul {
+	text-align: right;
+}
+
+/* меню по центру */
+.nav.center ul {
+	text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+	.nav {
+		position: relative;
+		min-height: 40px;
+	}	
+	.nav ul {
+		width: 220px;
+		padding: 5px 5px 5px 5px ;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 10px;
+		background: #D3D3DA url(icon-menu.png) no-repeat 25px 11px;
+		
+		
+	}
+	.nav li {
+		display: none; /* скрыть все <li> пункты */
+		margin: 0;
+                 
+	}
+	.nav .current {
+		display: block; /* показывать только текущие активные <li> пункты */
+                 padding: 0px 5px;
+                
+	}
+	.nav a {
+		display: block;
+		padding: 5px 5px 5px 32px;
+		text-align: left;
+               
+	}
+	.nav .current a {
+		background: none;
+		color: #666;
+               
+                
+	}
+
+	/* при наведении на пункты меню */
+	.nav ul:hover {
+		background-image: none;
+	}
+	.nav ul:hover li {
+		display: block;
+		margin: 0 0 5px;
+	}
+	.nav ul:hover .current {
+		background: url(icon-check.png) no-repeat 10px 7px;
+	}
+
+	/* адаптивное меню справа */
+	.nav.right ul {
+		left: auto;
+		right: 0;
+	}
+
+	/* адаптивное меню по центру */
+	.nav.center ul {
+		left: 50%;
+		margin-left: -90px;
+	}
+	
+}
+
+/*--The end--Menu for mobile--The end--*/
 #header3 {
         width:100%;
 	background: #F19900;
 	min-height: 50px;
         height: auto;
 }
+nav {
+text-align:center;
+        font-size:20px;
+	font-family:Arial; 
+        padding: 10px 0px 10px;    
+}
+ul {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+}
+.topmenu > li {
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+}
+.topmenu > li:last-child {
+  margin-right: 0;
+}
+a {
+  display: block;
+  padding: 10px 15px ;
+  text-decoration: none;
+  outline: none;
+  font-family: 'Lora', serif;
+  transition: .5s linear;
+}
+.fa {
+  font-family: "FontAwesome";
+  color: inherit;
+  padding-left: 10px;
+}
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+.one ul {
+  background: #D3D3DA;
+}
+.one ul a {
+  color: #000000;
+}
+.one .submenu {
+  display: none;
+  background: #D3D3DA;
+}
+.one ul li:hover .submenu {
+  display: block;
+}
+
+.submenu li a {
+  border-bottom: 1px solid rgba(0,0,0,.3);
+  color: black;
+}
+
 .p_header3 {
      font-family:Arial;
      font-size:28px;
@@ -91,7 +298,7 @@ position: relative; /* боковая колонка перемещается в
 	float: center;
 	font: bold 15px Helvetica, Arial, sans-serif;
 	height: 35px;
-	left: 35px;
+	
 	position: relative;
 	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 	

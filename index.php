@@ -6,20 +6,16 @@
 	<meta name="title" content="" />
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
-	<link rel="stylesheet" href="css/myStyle.css" type="text/css" media="screen, projection" />
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
 </head>
-<body>
-<div id="wrapper">
-<?php require 'bloks/header.php';?>
-</div>
-<?php require 'bloks/header2.php'; ?>
 <!-- основной блок -->
 <div id="wrapper">
  <div id="middle">
   <div id="container">
   <div id="content">
+      <?php require 'bloks/header.php';?>
 <!-- между метками AAA и BBB будем писать все наполнение сайта -->
-<!-- AAA -->
+<?php require 'bloks/header_menu.php'; ?>
 <br>
 <table>
   <tr>
