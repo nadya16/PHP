@@ -7,10 +7,10 @@
 <div id="1" style="top:1em;  width:auto; ; float:left;">
 <nav class="nav">
 		<ul>
-                    <li class="current"><img src="icon-menu.png"></li>
-			<li><a href="index.php">ГЛАВНАЯ</a></li>
+                    <li class="current"></li>   <!-- <img src="css/icon-menu.png"> -->
+			<li><a href="/autosalon.ru/main">ГЛАВНАЯ</a></li>
 			<li><a href="#Услуги">УСЛУГИ</a></li>
-			<li><a href="#">АКЦИИ</a></li>
+			<li><a href="/autosalon.ru/stock">АКЦИИ</a></li>
 			<li><a href="#Контакты">КОНТАКТЫ</a></li>
                         
 		</ul>
@@ -19,7 +19,7 @@
 </div>
 <div id="2" style="position: relative; top:1em;text-align:center;float:right; width:auto; ">	
     <p class="menu">
-<a  href="iframe.php"><input  value="Записаться в сервис" type="button"></a>
+<a href="/autosalon.ru/iframe"><input  value="Записаться в сервис" type="button"></a>
     </p>
 
 </div>
