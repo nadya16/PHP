@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/styleForReg.css" type="text/css" media="screen, projection">
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -13,6 +14,7 @@
 <div id="wrapper">
 <body onload="init()">
 <meta charset="utf-8">
+
 <title>Запись в сервис</title>
 
 <div class="container">

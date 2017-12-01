@@ -3,16 +3,30 @@
 <!-- между метками HHH и DDD будет наполнение хедера -->
 <!-- HHH -->
 
+
+<div id="1" style="top:1em;  width:auto; ; float:left;">
 <nav class="nav">
 		<ul>
-			<li  class="current"><a href="#">УСЛУГИ</a></li>
-			<li><a href="#">ГЛАВНАЯ</a></li>
+                    <li class="current"><img src="icon-menu.png"></li>
+			<li><a href="index.php">ГЛАВНАЯ</a></li>
+			<li><a href="#Услуги">УСЛУГИ</a></li>
 			<li><a href="#">АКЦИИ</a></li>
-			<li><a href="#">ОТЗЫВЫ</a></li>
-			<li><a href="#">КОНТАКТЫ</a></li>
-                         <li> <a href="iframe.php"><input value="Записаться в сервис" type="button"></a></li>
+			<li><a href="#Контакты">КОНТАКТЫ</a></li>
+                        
 		</ul>
+  
 	</nav>
+</div>
+<div id="2" style="position: relative; top:1em;text-align:center;float:right; width:auto; ">	
+    <p class="menu">
+<a  href="iframe.php"><input  value="Записаться в сервис" type="button"></a>
+    </p>
+
+</div>
+
+
+
+
 <!-- 
 <nav class="one">
   <ul class="topmenu">

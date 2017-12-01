@@ -6,7 +6,13 @@
 	<meta name="title" content="" />
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />
+         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/up.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">
+</script>
+
 </head>
 <!-- основной блок -->
 <div id="wrapper">
@@ -17,15 +23,43 @@
 <!-- между метками AAA и BBB будем писать все наполнение сайта -->
 <?php require 'bloks/header_menu.php'; ?>
 <br>
-<table>
-  <tr>
-<td align="center"><img src="img/zamena-masla-besplatno.png"></td>
-</tr>
-</table>
+    
+<div class="carusel1">
+<?php require 'bloks/carusel.php';?>
+    
+</div>
+  <script>
+var controls = document.querySelectorAll('.controls'); 
+for(var i=0; i<controls.length; i++){ 
+controls[i].style.display = 'inline-block'; 
+} 
+
+var slides = document.querySelectorAll('#slides .slide'); 
+var currentSlide = 0; 
+var slideInterval = setInterval(nextSlide,3000); 
+
+function nextSlide(){ 
+goToSlide(currentSlide+1); 
+} 
+
+function previousSlide(){ 
+goToSlide(currentSlide-1); 
+} 
+
+function goToSlide(n){ 
+slides[currentSlide].className = 'slide'; 
+currentSlide = (n+slides.length)%slides.length; 
+slides[currentSlide].className = 'slide showing'; 
+} 
+
+</script> 
+
 <br>
 <br>
+<section id="Контакты">	
 <?php require 'bloks/header_servises.php'; ?>
-<br>
+<br>	
+    
 <table>
   <tr>
 <td><p class="p_adress">пр. Филатова, 90</p></td>
@@ -40,6 +74,7 @@
 <td><img src="img/auto4.jpg"></td>
 </tr>
 </table>
+	</section>
 <br>
 <p class="p_h">
 Ваш автосервис в Ульяновске -
@@ -51,6 +86,7 @@
 а также осуществляет продажу запчастей.
  </p>
 <br>
+    <section id="Услуги">
 <p class="p_h1">Услуги автосервиса"Автосеть Гараж"</p>
 <br>
 
@@ -83,6 +119,7 @@
 </tr>
 </table>
 
+    </section>
 
 <p class="p_h1">
 Преимущества услуг нашего автосервиса для ВАЗ и других авто<br><br>
@@ -107,14 +144,45 @@
 <p class="p_text">
 Мы рады отметить, что на все услуги и детали, которые предлагает наш автосервис, цены остаются доступными как для крупных организаций, так и простых автовладельцев.
 </p>
-<p class ="p_h">Ждём Вас! <a href="iframe.php"><input value="Записаться в сервис" type="button"></a>
+<p class ="p_h">Ждём Вас! <a href="if.php"><input value="Записаться в сервис" type="button"></a>
 </p>
+
+<div id="upbutton"></div>
+
+<script>
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+            if ($('#upbutton').is(':hidden')) {
+                $('#upbutton').css({opacity : 1}).fadeIn('slow');
+            }
+        } else { $('#upbutton').stop(true, false).fadeOut('fast'); }
+    });
+    $('#upbutton').click(function() {
+        $('html, body').stop().animate({scrollTop : 0}, 300);
+    });
+</script>
+
+<style>
+  #upbutton {
+    background: url("img/up.png") no-repeat top left;
+    height: 60px;
+    width: 60px;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    z-index: 999;
+  }
+</style>
+
+
 <!-- BBB -->
 <!-- наполнение сайта - наш контент -->
   </div><!-- #content-->
 </div><!-- #container-->
+   
 </div>
-</div>
-<div id="wrapper">
+ 
 <?php require 'bloks/footer.php'; ?>
 </div>
